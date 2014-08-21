@@ -13,6 +13,6 @@ ConcaveHull
 
 ---
 
-Originally based on the [StackOverflow question](http://stackoverflow.com/questions/16407533/translating-concave-hull-algorithm-to-c-sharp) about the CSharp implementation of a [paper written by Adriano Moreira and Maribel Yasmina Santos from the  University of Minho](http://repositorium.sdum.uminho.pt/bitstream/1822/6429/1/ConcaveHull_ACM_MYS.pdf).
+Based on the [StackOverflow question](http://stackoverflow.com/questions/16407533/translating-concave-hull-algorithm-to-c-sharp) about the CSharp implementation of a [paper written by Adriano Moreira and Maribel Yasmina Santos](http://repositorium.sdum.uminho.pt/bitstream/1822/6429/1/ConcaveHull_ACM_MYS.pdf) from the  University of Minho.
 
-Prototype was [created by nredko](http://nredko.github.io/ConcaveHull) &ndash; and this implementation is a refactor to transform it into a fully working module.
+Initially a prototype was [created by nredko](http://nredko.github.io/ConcaveHull) &ndash; and this implementation is a refactor to transform it into a fully working module.
