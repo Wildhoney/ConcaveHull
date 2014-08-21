@@ -3,7 +3,7 @@ ConcaveHull
 
 ![Travis](http://img.shields.io/travis/Wildhoney/ConcaveHull.svg?style=flat)
 &nbsp;
-![npm](http://img.shields.io/npm/v/concave-hull.svg?style=flat)
+![npm](http://img.shields.io/npm/v/concavehull.svg?style=flat)
 &nbsp;
 ![License MIT](http://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)
 
