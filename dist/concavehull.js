@@ -39,20 +39,13 @@
 
         /**
          * @method convertLatLngs
-         * @param latLngs {latLngs[]}
+         * @param latLngs {Array}
          * @return {Object}
          */
         convertLatLngs: function convertLatLngs(latLngs) {
 
             var longestDistance = 0,
                 convertedPoints = latLngs.map(function(latLng, $index) {
-
-                    if (!(latLng instanceof L.LatLng)) {
-
-                        // Ensure that the passed array is a valid L.LatLng[] variable.
-                        throw "ConcaveHull: First argument should be of type {L.LatLng[]}.";
-
-                    }
 
                     // Transform the lat/long values into those the concave hull algorithm expects.
                     latLng.x = latLng.lng;
