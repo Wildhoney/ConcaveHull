@@ -7,7 +7,7 @@ ConcaveHull
 &nbsp;
 ![License MIT](http://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)
 
-* **Heroku**: [http://concave-hull.herokuapp.com/](http://concave-hull.herokuapp.com/)
+* **Heroku**: [http://freedraw.herokuapp.com/](http://freedraw.herokuapp.com/) &mdash; uses `ConcaveHull` by default;
 * **npm:** `npm install concavehull`
 * **Bower:** `bower install concavehull`
 
