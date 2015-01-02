@@ -53,7 +53,7 @@
 
                     if (latLngs[$index - 1]) {
 
-                        var distance = latLng.distanceTo(latLngs[$index - 1]);
+                        var distance = this.distanceTo(latLng, latLngs[$index - 1]);
 
                         if (distance > longestDistance) {
                             longestDistance = distance;
@@ -66,6 +66,28 @@
                 }.bind(this));
 
             return { points: convertedPoints, maxDistance: longestDistance };
+
+        },
+
+        /**
+         * @method distanceTo
+         * @param firstLatLng {Object}
+         * @param secondLatLng {Object}
+         * @return {Number}
+         */
+        distanceTo: function distanceTo(firstLatLng, secondLatLng) {
+
+            var R    = 6378137,
+                d2r  = $math.PI / 180,
+                dLat = (secondLatLng.lat - firstLatLng.lat) * d2r,
+                dLon = (secondLatLng.lng - firstLatLng.lng) * d2r,
+                lat1 = firstLatLng.lat * d2r,
+                lat2 = secondLatLng.lat * d2r,
+                sin1 = $math.sin(dLat / 2),
+                sin2 = $math.sin(dLon / 2);
+
+            var a = sin1 * sin1 + sin2 * sin2 * $math.cos(lat1) * $math.cos(lat2);
+            return R * 2 * $math.atan2($math.sqrt(a), $math.sqrt(1 - a));
 
         },
 
@@ -108,7 +130,7 @@
 
                 for (var i = 0, l = byAngle.length; i < l; i++) {
 
-                    if (current.distanceTo(byAngle[i]) < this.maxDistance && !this.isIntersecting(hull, byAngle[i])) {
+                    if (this.distanceTo(current, byAngle[i]) < this.maxDistance && !this.isIntersecting(hull, byAngle[i])) {
                         next = byAngle[i];
                         break;
                     }
