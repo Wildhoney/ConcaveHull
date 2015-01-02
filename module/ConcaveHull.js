@@ -11,11 +11,11 @@
      * @param maxDistance {Number}
      * @constructor
      */
-    $window.ConcaveHull = function ConcaveHull(latLngs, maxDistance) {
+    var ConcaveHull = function ConcaveHull(latLngs, maxDistance) {
 
         var result       = this.convertLatLngs(latLngs);
         this.points      = result.points;
-        this.maxDistance = $window.isFinite(maxDistance) ? maxDistance : (result.maxDistance + 1);
+        this.maxDistance = isFinite(maxDistance) ? maxDistance : (result.maxDistance + 1);
 
     };
 
@@ -298,4 +298,36 @@
 
     };
 
-})(window, window.Math);
+    /**
+     * Process of defining the module in the global scope.
+     *
+     * @method defineModule
+     * @return {void}
+     */
+    (function defineModule() {
+
+        if (typeof module !== 'undefined' && module.exports) {
+
+            // Add CommonJS Support!
+            module.exports = ConcaveHull;
+            return;
+
+        }
+
+        if (typeof define === 'function' && define.amd) {
+
+            // Add AMD Support!
+            define(function addAMDSupport() {
+                return ConcaveHull;
+            });
+
+            return;
+
+        }
+
+        // Otherwise the default is a normal export on the "window" property.
+        $window.ConcaveHull = ConcaveHull;
+
+    })();
+
+})(window, Math);
