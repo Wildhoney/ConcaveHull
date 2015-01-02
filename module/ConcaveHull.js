@@ -7,7 +7,7 @@
      * @author Adam Timberlake <adam.timberlake@gmail.com>
      * @author Nikolay Redko <redko@inexika.com>
      * @link https://github.com/Wildhoney/ConcaveHull
-     * @param latLngs {L.LatLng[]}
+     * @param latLngs {Object}
      * @param maxDistance {Number}
      * @constructor
      */
@@ -71,7 +71,7 @@
 
         /**
          * @method getLatLngs
-         * @return {L.LatLng[]}
+         * @return {Object}
          */
         getLatLngs: function getLatLngs() {
 
@@ -155,8 +155,8 @@
 
         /**
          * @method isIntersecting
-         * @param latLngs {L.LatLng[]}
-         * @param otherLatLngs {L.LatLng[]}
+         * @param latLngs {Object}
+         * @param otherLatLngs {Object}
          * @return {Boolean}
          */
         isIntersecting: function isIntersecting(latLngs, otherLatLngs) {
