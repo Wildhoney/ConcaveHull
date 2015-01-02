@@ -175,10 +175,10 @@
 
         /**
          * @method intersect
-         * @param p1 {L.LatLng}
-         * @param p2 {L.LatLng}
-         * @param q1 {L.LatLng}
-         * @param q2 {L.LatLng}
+         * @param p1 {Object}
+         * @param p2 {Object}
+         * @param q1 {Object}
+         * @param q2 {Object}
          * @return {Boolean}
          */
         intersect: function intersect(p1, p2, q1, q2) {
@@ -194,7 +194,7 @@
 
         /**
          * @method lat2y
-         * @param latLng {L.LatLng}
+         * @param latLng {Object}
          * @return {Number}
          */
         lat2y: function lat2y(latLng) {
@@ -203,9 +203,9 @@
 
         /**
          * @method ccw
-         * @param p0 {L.LatLng}
-         * @param p1 {L.LatLng}
-         * @param p2 {L.LatLng}
+         * @param p0 {Object}
+         * @param p1 {Object}
+         * @param p2 {Object}
          * @return {Number}
          */
         ccw: function ccw(p0, p1, p2) {
@@ -239,9 +239,9 @@
 
         /**
          * @method getAngle
-         * @param current {L.LatLng}
-         * @param previous {L.LatLng}
-         * @param next {L.LatLng}
+         * @param current {Object}
+         * @param previous {Object}
+         * @param next {Object}
          * @return {Number}
          */
         getAngle: function getAngle(current, previous, next) {
