@@ -1,4 +1,4 @@
-(function($window, $math) {
+(function($math) {
 
     "use strict";
 
@@ -348,8 +348,8 @@
         }
 
         // Otherwise the default is a normal export on the "window" property.
-        $window.ConcaveHull = ConcaveHull;
+        window.ConcaveHull = ConcaveHull;
 
     })();
 
-})(window, Math);
+})(Math);
