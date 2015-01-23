@@ -19,7 +19,7 @@ Initially a prototype was [created by nredko](http://nredko.github.io/ConcaveHul
 
 ## Getting Started
 
-Using `ConcaveHull` is terribly simple &ndash; all you have to do is pass an array of objects that conform to the `{ x: {Number}, y: {Number} }` format &ndash; in the case of [Leaflet.js](http://leafletjs.com/) this is just an array of `L.LatLng` objects.
+Using `ConcaveHull` is terribly simple &ndash; all you have to do is pass an array of objects that conform to the `{ lat: {Number}, lng: {Number} }` format &ndash; in the case of [Leaflet.js](http://leafletjs.com/) this is just an array of `L.LatLng` objects.
 
 Once you have your array of latitudinal and longitudinal values, you can instantiate the object, and then invoke the `getLatLngs` method:
 
