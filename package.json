@@ -1,6 +1,6 @@
 {
   "name": "concavehull",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Workable refactoring into a module of a concave hull algorithm.",
   "main": "dist/concavehull.min.js",
   "scripts": {
